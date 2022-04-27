@@ -1060,7 +1060,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 526980875}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
