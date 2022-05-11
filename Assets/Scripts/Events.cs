@@ -12,4 +12,9 @@ public class Events : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

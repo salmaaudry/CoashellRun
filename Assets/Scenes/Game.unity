@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 60415486}
   - component: {fileID: 60415485}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: BackToMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1983595553}
-        m_MethodName: QuitGame
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 7
   laneDistance: 2
-  jumpForce: 7
+  jumpForce: 7.5
   Gravity: -20
   maxSpeed: 10
 --- !u!1 &259152090
@@ -537,7 +537,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1103621668}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -697,7 +697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Back to Menu
 --- !u!222 &705807816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -886,7 +886,7 @@ RectTransform:
   - {fileID: 1280282684}
   - {fileID: 60415484}
   m_Father: {fileID: 1103621668}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1090,8 +1090,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 841637605}
   - {fileID: 351430408}
+  - {fileID: 841637605}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1112,7 +1112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dda486f0cee0024a9512206f6d0e04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 0}
 --- !u!1 &1224549597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,8 +1459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233c7dba179cf734ca578cd1e688edc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 3
-  countdownDisplay: {fileID: 0}
 --- !u!114 &1549734576
 MonoBehaviour:
   m_ObjectHideFlags: 0
