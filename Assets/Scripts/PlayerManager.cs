@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public static bool gameOver;
-    public GameObject gameOverPanel;
+    // public GameObject gameOverPanel;
     public static int numberOfCoins;
     public Text coinsText;
+    public GameOverScreen gameOverScreen;
+    int maxPlatform = 0;
     
 
     // Start is called before the first frame update
@@ -26,7 +28,8 @@ public class PlayerManager : MonoBehaviour
         if(gameOver)
         {
             Time.timeScale = 0;
-            gameOverPanel.SetActive(true);
+            // gameOverPanel.SetActive(true);
+            gameOverScreen.Setup(numberOfCoins);
         }
 
         coinsText.text = "Score " + numberOfCoins;
