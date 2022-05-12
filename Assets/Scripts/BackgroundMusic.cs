@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class BackgroundMusic : MonoBehaviour
 {
+    public Sound[] sounds;
     private static BackgroundMusic backgroundMusic;
 
+    void Start()
+    {
+        foreach(Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.loop = s.loop;
+        }
+        PlaySound("MainTheme");
+    }
     void Awake()
     {
         if(backgroundMusic == null)
@@ -17,6 +28,28 @@ public class BackgroundMusic : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void PlaySound(string name)
+    {
+        foreach(Sound s in sounds)
+        {
+            if(s.name == name)
+            {
+                s.source.Play();
+            }
+        }
+    }
+
+    public void StopSound(string name)
+    {
+        foreach(Sound s in sounds)
+        {
+            if(s.name == name)
+            {
+                s.source.Stop();
+            }
         }
     }
 }

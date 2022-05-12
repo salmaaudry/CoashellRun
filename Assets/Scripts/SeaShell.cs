@@ -20,6 +20,7 @@ public class SeaShell : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<BackgroundMusic>().PlaySound("CollectCoins");
             PlayerManager.numberOfCoins += 1;
             Debug.Log("SeaShells : " + PlayerManager.numberOfCoins);
             Destroy(gameObject);
