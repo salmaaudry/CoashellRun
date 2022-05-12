@@ -10,8 +10,6 @@ public class PlayerManager : MonoBehaviour
     public static int numberOfCoins;
     public Text coinsText;
     public GameOverScreen gameOverScreen;
-    int maxPlatform = 0;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +27,13 @@ public class PlayerManager : MonoBehaviour
         {
             Time.timeScale = 0;
             // gameOverPanel.SetActive(true);
+            if(numberOfCoins > PlayerPrefs.GetInt("HighScore", 0))
+            {
+                // newRecordPanel.SetActive(true);
+                // newRecordText.text = "New Record" + numberOfCoins;
+                PlayerPrefs.SetInt("HighScore", numberOfCoins);
+            }
+            
             gameOverScreen.Setup(numberOfCoins);
         }
 
