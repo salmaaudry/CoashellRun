@@ -6,6 +6,7 @@ public class Events : MonoBehaviour
     public void ReplayGame()
     {
         SceneManager.LoadScene("Game");
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 
     public void QuitGame()
@@ -16,5 +17,6 @@ public class Events : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 }

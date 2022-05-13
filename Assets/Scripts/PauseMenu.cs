@@ -23,11 +23,13 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 
     public void Home()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 }

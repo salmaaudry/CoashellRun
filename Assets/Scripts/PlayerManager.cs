@@ -17,7 +17,6 @@ public class PlayerManager : MonoBehaviour
         gameOver = false;
         Time.timeScale = 1;
         numberOfCoins = 0;
-        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 
     // Update is called once per frame

@@ -14,7 +14,8 @@ public class Menu : MonoBehaviour
         highscoreText.text = "" + PlayerPrefs.GetInt("HighScore", 0);
     }
     public void Play(string sceneName){
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Game");
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
     }
 
     public void Exit(){
