@@ -27,6 +27,8 @@ public class TileManager : MonoBehaviour
                 SpawnTile(Random.Range(0, tilePrefabs.Length));
             }
         }
+        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
