@@ -63,6 +63,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<PauseMenu>().Pause();
+        }
+
         // For Swipe
         if (SwipeManager.swipeRight)
         {

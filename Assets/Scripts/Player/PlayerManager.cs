@@ -10,9 +10,10 @@ public class PlayerManager : MonoBehaviour
     public static int numberOfCoins;
     public Text coinsText;
     public GameOverScreen gameOverScreen;
+    public static PlayerManager instance;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         gameOver = false;
         Time.timeScale = 1;
