@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BackgroundMusic : MonoBehaviour
 {
-    public Sound[] sounds;
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private AudioMixerGroup soundEffectsMixerGroup;
+    [SerializeField] private Sound[] sounds;
     private static BackgroundMusic backgroundMusic;
 
     void Start()
@@ -14,6 +17,16 @@ public class BackgroundMusic : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.loop = s.loop;
+
+            switch (s.audioType)
+            {
+                case Sound.AudioTypes.soundEffect:
+                    s.source.outputAudioMixerGroup = soundEffectsMixerGroup;
+                    break;
+                case Sound.AudioTypes.music:
+                    s.source.outputAudioMixerGroup = musicMixerGroup;
+                    break;
+            }
         }
         PlaySound("MainTheme");
     }

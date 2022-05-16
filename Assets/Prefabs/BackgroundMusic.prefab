@@ -44,20 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e80fb6e3bb5e86e4ba1ee93e251d0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: -454404633528741786, guid: 7fe3ac3686abcb64fab7dd0c0fe3aea8,
+    type: 2}
+  soundEffectsMixerGroup: {fileID: -8588807750540589524, guid: 7fe3ac3686abcb64fab7dd0c0fe3aea8,
+    type: 2}
   sounds:
-  - name: MainTheme
+  - audioType: 1
+    name: MainTheme
     clip: {fileID: 8300000, guid: 71d2ee8e01c18d7429018b96145ee978, type: 3}
     volume: 0.3
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: CollectCoins
+  - audioType: 0
+    name: CollectCoins
     clip: {fileID: 8300000, guid: e3309ecc3d84c714590615c5777b76e2, type: 3}
     volume: 0.4
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: GameOver
+  - audioType: 0
+    name: GameOver
     clip: {fileID: 8300000, guid: 28a6516eb5b34b94d86a55b67e387ab5, type: 3}
     volume: 0.6
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!82 &6968086234836596605
